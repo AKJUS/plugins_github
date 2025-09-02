@@ -156,7 +156,7 @@ public class AccountController implements VelocityController {
             .update(
                 "Set Username from GitHub",
                 accountId,
-                u -> u.addExternalId(externalIdFactory.create(key, accountId, null, null)));
+                u -> u.addExternalId(externalIdFactory.create(key, accountId)));
       } catch (Exception e) {
         throw new IllegalArgumentException(
             "Internal error while trying to set username='" + username + "'");
